@@ -1,0 +1,17 @@
+Server Side
+Create 2 routes / and /play.
+/ renders an :index template.
+/play renders a :play template
+
+get /games.json returns all games as json
+post games {label: "My New Game"} creates a new game and assigns a cookie value of game_id to equal the created games id.
+get '/game.json' reads the cookie and returns the game you're playing:
+{label: <game label>,
+ townsPeople: <students playing>
+ }
+
+ post /join/:id assigns the game_id cookie with :id
+
+ post /kill.json requires a parameter of dead with the name of the person the group is killing. This returns <mafia_status>
+
+ post /sleep.json performs a mafia_kill. returns the name of the person killed
